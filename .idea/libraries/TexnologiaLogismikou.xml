@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="TexnologiaLogismikou">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/intelliq_api.zip!/" />
+      <root url="jar://$PROJECT_DIR$/pStats.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
