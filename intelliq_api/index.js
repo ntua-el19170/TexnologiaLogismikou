@@ -185,11 +185,11 @@ app.post(`${baseUrl}/doanswer/:questionnaireID/:questionID/:session/:optionID`, 
     try {
         await connection.connect();
         const sessionFind = await connection.query(`SELECT * FROM Q_Session WHERE session_id = '${sessionId}'`)
-        if(sessionFind[0].length==0){
+        if(sessionFind[0].length===0){
             await connection.query(`INSERT INTO Q_Session VALUES ('${sessionId}','${Date().toString()}','FALSE','${questionnaireId}')`)
         }
         const answerExists = await connection.query(`SELECT * FROM Answer WHERE session_id = '${sessionId}' AND question_id = '${questionId}'`)
-        if(answerExists[0].length==0){
+        if(answerExists[0].length===0){
             const result = await connection.query(`INSERT INTO Answer VALUES (default,'${sessionId}','${questionId}','${optionId}','${questionnaireId}')`)
             res.send(result)
         }
