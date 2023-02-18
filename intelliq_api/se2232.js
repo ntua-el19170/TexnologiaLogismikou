@@ -155,7 +155,7 @@ program.command('getquestionanswers')
         }
     )
 
-
+// use-case_1 function
 program.command('showsessionanswers')
     .requiredOption('-p, --session_id <value>')
     .option('-f, --format <value>')
@@ -178,6 +178,7 @@ program.command('showsessionanswers')
         }
     )
 
+// use-case_2 function
 
 program.command('questionstats')
     .requiredOption('-p, --questionnaire_id <value>')

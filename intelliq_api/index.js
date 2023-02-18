@@ -264,6 +264,7 @@ app.get(`${baseUrl}/getquestionanswers/:questionnaireID/:questionID`, async (req
     }
 })
 
+// use-case_1 endpoint
 
 app.get(`${baseUrl}/showsessionanswers/:sessionID`, async (req, res) => {
     const sessionId = req.params.sessionID;
@@ -289,6 +290,7 @@ app.get(`${baseUrl}/showsessionanswers/:sessionID`, async (req, res) => {
 })
 
 
+// use-case_2 endpoint
 
 app.get(`${baseUrl}/questionstats/:questionnaire_ID/:question_ID`, async (req, res) => {
     const questionnaire_Id = req.params.questionnaire_ID;
